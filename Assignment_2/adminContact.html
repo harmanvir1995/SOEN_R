@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="adminIndex.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="adminIndex.html">Home</a>
+          <a href="adminResume.html">Resume</a>
+          <a href="adminProjects.html">Projects</a>
+          <a href="adminContact.html">Contact</a>
+          <a href="adminSocial.html">Social</a>
+          <a href="logout.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <input
+        type="submit"
+        id="isubmit"
+        value="ReadMessage"
+        onclick="readMessages()"
+      />
+      <script>
+        function readMessages() {
+          var fileInput = document.createElement("input");
+          fileInput.type = "file";
+
+          fileInput.onchange = function (event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function () {
+              var text = reader.result;
+              var pre = document.createElement("pre");
+              pre.textContent = text;
+              document.body.appendChild(pre);
+            };
+
+            reader.readAsText(file);
+          };
+
+          fileInput.click();
+        }
+      </script>
+    </section>
+  </body>
+</html>

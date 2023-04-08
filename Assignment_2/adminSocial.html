@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="adminIndex.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="adminIndex.html">Home</a>
+          <a href="adminResume.html">Resume</a>
+          <a href="adminProjects.html">Projects</a>
+          <a href="adminContact.html">Contact</a>
+          <a href="adminSocial.html">Social</a>
+          <a href="logout.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <form>
+        <textarea
+          placeholder=" Type here..."
+          cols="50"
+          rows="10"
+          id="s1"
+        ></textarea
+        ><br />
+        <label class="s1class" for="s1">Social Link 1</label>
+        <br />
+        <br />
+        <br />
+        <textarea
+          placeholder=" Type here..."
+          cols="50"
+          rows="10"
+          id="s2"
+        ></textarea
+        ><br />
+        <label class="s2class" for="s2">Social Link 2</label>
+        <br />
+        <br />
+        <br />
+        <textarea
+          placeholder=" Type here..."
+          cols="50"
+          rows="10"
+          id="s3"
+        ></textarea
+        ><br />
+        <label class="s3class" for="s3">Social Link 3</label>
+        <br />
+        <input
+          type="submit"
+          onclick="submitSocial()"
+          value="Submit"
+          id="isubmit"
+        />
+      </form>
+      <script>
+        function submitSocial() {
+          var data1 = "Social Link 1: " + document.getElementById("s1").value;
+          var data2 = "Social Link 2: " + document.getElementById("s2").value;
+          var data3 = "Social Link 3: " + document.getElementById("s3").value;
+          var data = data1 + "\n" + data2 + "\n" + data3;
+          var file = new Blob([data], { type: "text/plain;charset=utf-8" });
+          saveAs(file, "adminSocial.txt");
+        }
+
+        function saveAs(blob, filename) {
+          var downloadLink = document.createElement("a");
+          downloadLink.download = filename;
+          downloadLink.href = window.URL.createObjectURL(blob);
+          downloadLink.click();
+        }
+      </script>
+    </section>
+  </body>
+</html>

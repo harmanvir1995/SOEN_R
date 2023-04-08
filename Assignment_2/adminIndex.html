@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="adminIndex.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="adminIndex.html">Home</a>
+          <a href="adminResume.html">Resume</a>
+          <a href="adminProjects.html">Projects</a>
+          <a href="adminContact.html">Contact</a>
+          <a href="adminSocial.html">Social</a>
+          <a href="logout.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <form>
+        <textarea
+          placeholder=" Type here..."
+          cols="50"
+          rows="10"
+          id="ps"
+        ></textarea
+        ><br />
+        <label class="psclass" for="ps">Professional Statement</label>
+        <br />
+        <br />
+        <br />
+        <textarea
+          placeholder=" Type here..."
+          class="bbclass"
+          id="bb"
+          cols="50"
+          rows="10"
+        ></textarea>
+        <br />
+        <label class="psclass" for="bb">Brief Biography</label>
+        <br />
+        <input
+          type="submit"
+          onclick="submitIndex()"
+          value="Submit"
+          id="isubmit"
+        />
+      </form>
+      <script>
+        function submitIndex() {
+          var data1 = document.getElementById("ps").value;
+          var data2 = document.getElementById("bb").value;
+          var data =
+            "Professional Statement: " +
+            data1 +
+            "\n\nBreif Biography: " +
+            data2;
+          var file = new Blob([data], { type: "text/plain;charset=utf-8" });
+          saveAs(file, "adminIndex.txt");
+        }
+
+        function saveAs(blob, filename) {
+          var downloadLink = document.createElement("a");
+          downloadLink.download = filename;
+          downloadLink.href = window.URL.createObjectURL(blob);
+          downloadLink.click();
+        }
+      </script>
+    </section>
+  </body>
+</html>

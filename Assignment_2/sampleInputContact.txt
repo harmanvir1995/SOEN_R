@@ -1,0 +1,4 @@
+Name,Email,Phone,Street,City,State,ZIP,Country
+John Doe,johndoe@example.com,555-1234,123 Main St,Anytown,CA,12345,USA
+Jane Smith,janesmith@example.com,555-5678,456 Oak St,Somewhere,TX,67890,USA
+Bob Johnson,bobjohnson@example.com,555-9012,789 Elm St,Nowhere,NY,45678,USA

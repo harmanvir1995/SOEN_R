@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="adminIndex.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="adminIndex.html">Home</a>
+          <a href="adminResume.html">Resume</a>
+          <a href="adminProjects.html">Projects</a>
+          <a href="adminContact.html">Contact</a>
+          <a href="adminSocial.html">Social</a>
+          <a href="logout.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <form>
+        <textarea
+          placeholder=" Type here..."
+          id="projects"
+          cols="50"
+          rows="10"
+        ></textarea>
+        <br />
+        <label for="projects">My Projects</label>
+        <br />
+        <input
+          type="submit"
+          onclick="submitProjects()"
+          value="Submit"
+          id="isubmit"
+        />
+      </form>
+      <script>
+        function submitProjects() {
+          var data =
+            "My Projects: " + document.getElementById("projects").value;
+          var file = new Blob([data], { type: "text/plain;charset=utf-8" });
+          saveAs(file, "adminProjects.txt");
+        }
+
+        function saveAs(blob, filename) {
+          var downloadLink = document.createElement("a");
+          downloadLink.download = filename;
+          downloadLink.href = window.URL.createObjectURL(blob);
+          downloadLink.click();
+        }
+      </script>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="adminIndex.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="adminIndex.html">Home</a>
+          <a href="adminResume.html">Resume</a>
+          <a href="adminProjects.html">Projects</a>
+          <a href="adminContact.html">Contact</a>
+          <a href="adminSocial.html">Social</a>
+          <a href="logout.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <input type="submit" value="Logout" onclick="processLogout()" />
+      <script>
+        function processLogout() {
+          sessionStorage.clear();
+        }
+      </script>
+    </section>
+  </body>
+</html>

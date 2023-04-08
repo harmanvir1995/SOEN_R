@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="adminIndex.css" />
+    <script></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="adminIndex.html">Home</a>
+          <a href="adminResume.html">Resume</a>
+          <a href="adminProjects.html">Projects</a>
+          <a href="adminContact.html">Contact</a>
+          <a href="adminSocial.html">Social</a>
+          <a href="logout.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <form>
+        <textarea
+          class="eqclass"
+          placeholder=" Type here..."
+          cols="50"
+          rows="10"
+          id="eq"
+        ></textarea
+        ><br />
+        <label class="eqclass" for="eq">Educational Qualification</label>
+        <br />
+        <br />
+        <br />
+        <textarea
+          class="ssclass"
+          placeholder=" Type here..."
+          id="ss"
+          cols="50"
+          rows="10"
+        ></textarea>
+        <br />
+        <label class="psclass" for="ss">Skill Set</label>
+        <br />
+        <br />
+        <br />
+        <textarea
+          class="arclass"
+          placeholder=" Type here..."
+          id="ar"
+          cols="50"
+          rows="10"
+        ></textarea>
+        <br />
+        <label class="arclass" for="ar">Awards/Recognition</label>
+        <br />
+        <br />
+        <br />
+        <textarea
+          class="weclass"
+          placeholder=" Type here..."
+          id="we"
+          cols="50"
+          rows="10"
+        ></textarea>
+        <br />
+        <label class="weclass" for="we">Work Experience</label>
+        <br />
+        <br />
+        <br />
+        <textarea
+          class="refclass"
+          placeholder=" Type here..."
+          id="ref"
+          cols="50"
+          rows="10"
+        ></textarea>
+        <br />
+        <label class="refclass" for="ref">Refrences</label>
+        <br />
+        <input type="submit" onclick="submitResume()" value="Submit" />
+      </form>
+      <script>
+        function submitResume() {
+          var education =
+            "Educational Qualifications: " +
+            document.getElementById("eq").value;
+          var skill = "Skill Set: " + document.getElementById("ss").value;
+          var work = "Work Experience: " + document.getElementById("we").value;
+          var awards =
+            "Awards/Recognition: " + document.getElementById("ar").value;
+          var referees = "Referees: " + document.getElementById("ref").value;
+          var data =
+            education +
+            "\n\n" +
+            skill +
+            "\n\n" +
+            work +
+            "\n\n" +
+            awards +
+            "\n\n" +
+            referees;
+          var file = new Blob([data], { type: "text/plain;charset=utf-8" });
+          saveAs(file, "adminResume.txt");
+        }
+
+        function saveAs(blob, filename) {
+          var downloadLink = document.createElement("a");
+          downloadLink.download = filename;
+          downloadLink.href = window.URL.createObjectURL(blob);
+          downloadLink.click();
+        }
+      </script>
+    </section>
+  </body>
+</html>
