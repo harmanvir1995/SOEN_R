@@ -1,0 +1,40 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #F0F0F0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navdiv{
+    width: 1200px;
+   text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    border: solid;
+    display: block;
+    float: left;
+    width: 16%;
+}
+
+body{
+    margin-top: 40px;
+    border:solid;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+.form input{
+    text-align: left;
+    margin: 10px;
+}
+
+
