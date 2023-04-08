@@ -1,0 +1,46 @@
+Educational Qualifications: Bachelors of Computer Science at Concordia University
+Member of the Institute for Co-operative Education
+GPA 3.76/4.30
+Relevant Courses: Object-Oriented Programming II | Data Structures and Algorithms | System Hardware | Programming Paradigm
+Verdun Adult Career Center
+Basic programming in C, Java, JavaScript
+Design floor plans for the commercial and residential buildings with details
+D.C.Model International School
+High School
+
+
+Skill Set: Concordia University
+Object Oriented Programming Language
+Database
+Operating System
+Artifical Intelligence
+DevOps
+Continuous Integration and Continuous Deployment (CI/CD)
+Automation and scripting (e.g. Python, Shell, Ansible, Terraform)
+Source code management (e.g. Git)
+Cloud computing (e.g. AWS, Azure, Google Cloud)
+Containerization and orchestration (e.g. Docker, Kubernetes)
+Infrastructure as Code (IaC)
+Monitoring and logging (e.g. Nagios, ELK Stack)
+Virtualization (e.g. VMWare, VirtualBox)
+Networking and security
+Database administration (e.g. MySQL, PostgreSQL, MongoDB)
+
+Work Experience: DevOps Engineer, Ineat Canada
+Contributed to fully automated CI & CD pipelines.
+Learned all about Docker, Kubernetes, Helm and OpenShift.
+Managed infrastructure as code and automated cloud deployments.
+Implemented best practices to build, release and manage the configuration of production systems.
+Deployed new application releases and perform some level of sanity testing.
+Analyzed log files as part of incident root cause analysis.
+IT Service Desk Operator
+Helped trouble shooting in software and hardware.
+Inserted data in the database.
+Fixing networks.
+Solving tickets
+
+Awards/Recognition: The Golden Key International Honor Society
+Dean's List
+
+Referees: Harinder Partap Singh Senior Developer
+Sarabpreet Singh Rekhi Data Scientits
